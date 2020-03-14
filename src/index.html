@@ -9,7 +9,7 @@
   <script src="js/three.min.js"></script>
   <script src="js/panolens.min.js"></script>
   <style>
-    #pano {
+    #pano,#play  {
       width: 80vw;
       height: 80vh;
       margin-left: 10vw;
@@ -22,6 +22,11 @@
       width: 800px;
       height: 480;
     }
+
+    #play {
+      position: absolute;
+      background: gray;
+    }
   </style>
 </head>
 
@@ -29,6 +34,7 @@
   <div id="pano">
 
   </div>
+  <div id="play"><button onclick="triggerVideoPlay()">PLAY</button></div>
   <video id="video" autoplay="autoplay"></video>
 </body>
 
