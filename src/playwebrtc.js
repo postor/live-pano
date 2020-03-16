@@ -9,6 +9,7 @@ export default (webrtcUrl, videoElement, container) => {
     muted: false
   })
   panorama.setVideoCurrentTime = () => { }
+  panorama.isMobile = () => false
   const viewer = new Viewer({ container, controlBar: false });
   viewer.add(panorama);
 
