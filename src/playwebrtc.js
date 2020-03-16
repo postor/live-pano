@@ -2,7 +2,7 @@
 import { VideoPanorama, Viewer } from 'panolens'
 import pullStream from './tx'
 
-export default async (webrtcUrl, videoElement, container) => {
+export default (webrtcUrl, videoElement, container) => {
   const panorama = new VideoPanorama('', {
     autoplay: true,
     videoElement,
@@ -12,5 +12,5 @@ export default async (webrtcUrl, videoElement, container) => {
   const viewer = new Viewer({ container, controlBar: false });
   viewer.add(panorama);
 
-  pullStream(webrtcUrl, videoElement)
+  return () => pullStream(webrtcUrl, videoElement)
 }
