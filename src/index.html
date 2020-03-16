@@ -19,10 +19,10 @@
     #pano,
     #play {
       position: relative;
-      width: 80vw;
-      height: 80vh;
-      left: 10vw;
-      top: 10vh;
+      width: 100vw;
+      height: 75vw;
+      left: 0;
+      top: 0;
       /* display: none; */
     }
 
@@ -33,8 +33,11 @@
     #play {
       position: absolute;
       background: gray;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
   </style>
 </head>
 
@@ -42,7 +45,7 @@
   <div id="pano">
 
   </div>
-  <div id="play"><button onclick="triggerVideoPlay()">PLAY</button></div>
+  <div id="play"><button id="playbutton" onclick="triggerVideoPlay()">PLAY</button></div>
   <video id="video" autoplay="autoplay"></video>
 </body>
 
